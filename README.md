@@ -1,3 +1,5 @@
+"Public Demo: Authentication is bypassed for review purposes. Data changes persist in real-time."
+
 # StockPulse — Modern SaaS Admin Dashboard
 
 A full-stack product and inventory management dashboard built with Next.js (App Router), focusing on server-first architecture, type safety, and seamless mutations.
