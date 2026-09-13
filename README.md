@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StockPulse — Modern SaaS Admin Dashboard
 
-## Getting Started
+A full-stack product and inventory management dashboard built with Next.js (App Router), focusing on server-first architecture, type safety, and seamless mutations.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **SaaS Dashboard Shell:** Responsive layout featuring a fixed/collapsible sidebar, metrics header, and polished UI using shadcn/ui and Tailwind CSS.
+- **Server Actions & Mutations:** End-to-end CRUD operations handled directly on the server without custom API boilerplates.
+- **Robust Validation:** Strict runtime schema validation using Zod with server-to-client field error handling.
+- **Persistent Data Layer:** Cloud PostgreSQL database managed via Prisma ORM.
+- **Instant UI Updates:** On-demand cache invalidation via Next.js `revalidatePath`.
+- **Derived State:** Client-side category filtering and search queries evaluated without redundant effects.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Database & ORM:** PostgreSQL (Neon) & Prisma
+- **Form & Data Validation:** Zod
+- **Styling:** Tailwind CSS & shadcn/ui
+- **Icons:** Lucide React
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Getting Started
 
-## Learn More
+1. Clone the repository:
+   \`\`\`bash
+   git clone https://github.com/your-username/product-dashboard.git
+   cd product-dashboard
+   \`\`\`
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Set up environment variables:
+   Create a \`.env\` file in the root directory:
+   \`\`\`env
+   DATABASE_URL="your-postgresql-connection-string"
+   \`\`\`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Push the Prisma schema to your database:
+   \`\`\`bash
+   npx prisma db push
+   \`\`\`
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Start the development server:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
