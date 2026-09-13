@@ -47,7 +47,7 @@ export default function AddProductForm({
         <Label htmlFor="price">Price</Label>
         <Input
           id="price"
-          defaultValue={data?.fieldsData?.price}
+          defaultValue={data?.fieldsData?.price?.toString() || ""}
           name="price"
           type="text"
           placeholder="1000"

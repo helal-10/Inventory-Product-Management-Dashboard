@@ -25,4 +25,10 @@ export const formSchema = z.object({
   category: z.enum(CATEGORIES, { message: "Please select a valid category" }),
 });
 
-export type Product = z.infer<typeof formSchema> & { id: string };
+export type Product = {
+  id: string;
+  title: string;
+  price: number;
+  category: string;
+  createdAt?: Date;
+};
